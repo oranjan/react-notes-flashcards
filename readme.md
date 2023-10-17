@@ -6,9 +6,9 @@ Sure, here's an improved version of your `Readme.md` file with enhanced language
 Welcome to the React Notes and Flashcards repository, a valuable resource for learning and mastering React. We've curated a collection of flashcards and useful information to aid your journey.
 
 ## Flash Cards
-
-- [Access Flash Cards](https://www.revisely.com/flashcards/packs/5WaQD) - Click this link to access the flashcards.
-
+-Links to access flashCard
+- [Access Flash Cards](https://www.revisely.com/flashcards/packs/5WaQD)
+- [Access Flash Cards](https://www.revisely.com/flashcards/packs/tL9TC)
 ## Logical Operators
 
 Understanding logical operators is fundamental in React development:
