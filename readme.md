@@ -130,3 +130,74 @@ Replace `apiUrl` with your actual API endpoint.
 -  Today, I've studied for 5.5 hours, and it feels great. I'm wearing an extra layer because it's cold outside, but the nice weather makes it worth it. Hopefully, the extra layer will keep me from getting sick.
 
 ```
+
+Here's the content you provided formatted as a `README.md` file:
+
+```markdown
+# README
+
+## Navigating Directories
+
+To navigate to the previous directory, use the following command:
+
+```bash
+cd ..
+```
+
+To stay in the current directory, use:
+
+```bash
+cd .
+```
+
+## File Paths
+
+An absolute path specifies the exact location of a file or directory in the file system, starting from the root directory. For example, an absolute path might look like this:
+
+Absolute Path: `C:/folder1/images/wallpaper/1`
+
+On the other hand, a relative path specifies the location of a file or directory in relation to your current working directory. For instance, if you are already in the `folder1` directory and you want to specify the path to `1`, the relative path would be:
+
+Relative Path: `images/wallpaper/1`
+
+You don't need to include the starting directory (`folder1`) because you're already in it. This relative path tells the system to go from the current directory (`folder1`) into the `images` directory and then into the `wallpaper` directory to access the `1` file.
+
+## Path vs. Route
+
+1. **Path (URL Path):** In the context of a web browser, the "Path" refers to the portion of the URL that specifies the location of a specific resource (usually a web page) on a web server. For example, in the URL "https://www.example.com/products/laptops," the path is "/products/laptops." It helps the web server determine which resource to serve or which route to take in the application. In a web application, the path is used to navigate between different pages or components.
+
+2. **Route (React Router Route):** In React and React Router, a "Route" is a component used to define the mapping between a URL path and a specific component to be rendered when that path is visited. React Router is a library for handling routing and navigation in React applications.
+
+## React Router Example
+
+```jsx
+<Link
+    to=".."
+    relative="path" // Relative to path, not route (default, which matches path with component)
+    className="back-button"
+>
+  &larr; <span>Back to all vans</span>
+</Link>
+
+<NavLink to="." 
+    end // "/host/vans/1" only matches with the exact same path
+    // Without 'end', NavLink can match with similar child paths
+    // e.g., /host/vans/1/pricing or /host/vans/1/x/y, etc.
+    style={({ isActive }) => isActive ? activeStyles : {}}
+>
+```
+
+## Job Searching and Resume Tips
+
+- When job hunting, target positions and salary goals.
+- Make a list of potential employers.
+- Connect with HRs, engineering managers of startups, or SDEs.
+- Consider using optional notes for referrals and share a bitly link to your resume.
+- Don't hesitate to apply, even if you're not entirely eligible (e.g., if you have 2 years of experience).
+- Latest interview experiences can be a sign that a company is actively hiring.
+- Save the contact information of recruiters.
+- Consider mock interviews to prepare effectively.
+- Tailor your resume, highlight good projects, focus on JavaScript-specific LeetCode, and emphasize your open-source contributions.
+- When explaining projects on your resume, assume the reader knows very little and emphasize metrics, bold features, and the tech stack. Place the most important information in the top-left corner.
+
+```
