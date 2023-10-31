@@ -1,7 +1,11 @@
+Here's the provided content formatted in Markdown:
 
 ```markdown
 # React Notes and Flashcards
 
+## Flash Cards
+- [Access Flash Cards 1](https://www.revisely.com/flashcards/packs/5WaQD)
+- [Access Flash Cards 2](https://www.revisely.com/flashcards/packs/tL9TC)
 
 ## Logical Operators
 
@@ -54,7 +58,7 @@ In React components, event handlers automatically receive an event object as a p
 ```javascript
 const text = "A brown fox jumped over...";
 
-const subtext = text split("x");
+const subtext = text.split("x");
 
 console.log(subtext); // ["A brown fo",""]
 ```
@@ -176,4 +180,169 @@ Given the following URLs from an example API:
 
 ## Request Body and Headers
 - A request body is used to send data to the server, primarily with POST and PUT requests. The data must be converted into JSON.
--
+- Headers provide additional information about the request.
+
+## REST (Representational State Transfer)
+- REST is a design pattern for standard communication between clients and servers.
+- REST principles:
+  1. Client and server separation.
+  2. Statelessness: Servers do not remember previous requests.
+
+## Nouns and Verbs in REST
+- In REST, API endpoints are typically represented by nouns (e.g., /bikes) and HTTP methods are the verbs.
+- Query strings and URL parameters are used to specify data in requests.
+
+For more details on REST API, refer to [this presentation](https://docs.google.com/presentation/d/e/2PACX-1vTEztADtG8OhJ4695LYwtVftNgriQK7zAOsYNru9OfaPA1mQEAlkNd1BqgOdec1aZRC6PxSxOnlrBeH/pub?start=false&loop=false&delayms=3000&slide=id.gd92b27aadb_0_310).
+
+Remember that HTTP is single-threaded, which means commands are executed one at a time.
+
+# useContext
+
+To avoid prop drilling, we use `useContext` in React:
+
+```javascript
+import { createContext } from "react";
+
+const ThemeContext = createContext();
+
+// Wrap your app with the Provider:
+ReactDOM.render(
+  <ThemeContext.Provider value="light">
+    <App />
+  </ThemeContext.Provider>,
+  document.getElementById("root")
+);
+
+// Consume the context in your child component:
+const value = useContext(ThemeContext);
+
+console.log(value); //light
+```
+
+This allows you to share values between components without passing props through all levels of the component tree.
+
+## Daily Update 17 Oct '23
+
+- Today, I've studied for 5.5 hours, and it feels great. I'm wearing an extra layer because it's cold outside, but the nice weather makes it worth it. Hopefully, the extra layer will keep me from getting sick.
+
+# HTTP Methods and API Basics
+
+## HTTP Methods
+- HTTP stands for Hypertext Transfer Protocol.
+- A protocol is an agreed-upon, standard way of doing something.
+- The protocol in a URL is represented by the part before "://," e.g., "https."
+- When requesting data from an API, the most common method used is GET.
+
+## API (Application Programming Interface)
+- An API is any tool that helps your program connect and communicate with another program.
+- We use APIs to get data from servers.
+- APIs can be pre-written code that performs various tasks, such as the DOM API, Array method API, and local storage.
+- 3rd party APIs are provided by external services.
+- A server is a computer that listens to requests from devices (e.g., PC, mobile) and returns responses.
+- The client is the entity that sends requests to the server.
+
+## Request and Response
+- A request is made by a client to ask for something, like resources, HTML, fonts, videos, images, or JSON.
+- The server listens to requests and responds, either fulfilling the request or not.
+
+## JSON (JavaScript Object Notation)
+- JSON stands for JavaScript Object Notation.
+- JSON objects have keys enclosed in double quotes and don't have a trailing comma.
+- It is a stringified JavaScript object and cannot contain functions.
+- XMLHttpRequest (XHR) requests are often used to get JSON responses.
+
+## Asynchronous JavaScript
+- Asynchronous JavaScript allows out-of-order execution of code.
+- You can use `fetch` to make asynchronous requests to APIs.
+
+## HTTP Basics
+1. What does HTTP stand for? Hypertext Transfer Protocol.
+2. How would you describe what a protocol is to a complete newbie? An agreed-upon, standard way of doing something.
+3. Which part of this URL describes the protocol? The part before "://," e.g., "https."
+4. What request method do you use when asking for data from an API? GET.
+
+## Base URL and Endpoint
+- A Base URL is the part of the URL that doesn't change, e.g., "https://blahblahblah.com/api/v2."
+- An Endpoint specifies exactly which resource you want to get from the API.
+
+Given the following URLs from an example API:
+- Base URL: https://blahblahblah.com/api/v2
+- Available endpoints: /users, /products, /products/<some-id-of-a-product-here>
+
+## Real-World Usage of HTTP Methods
+- GET: Retrieving weather information, accessing the database.
+- POST: Creating a new screencast, adding data to the database.
+- PUT: Marking items as "completed" on a shared todo list, updating data in the database.
+- DELETE: Deleting unnecessary messages on Slack, removing data from the database.
+
+## Request Body and Headers
+- A request body is used to send data to the server, primarily with POST and PUT requests. The data must be converted into JSON.
+- Headers provide additional information about the request.
+
+## REST (Representational State Transfer)
+- REST is a design pattern for standard communication between clients and servers.
+- REST principles:
+  1. Client and server separation.
+  2. Statelessness: Servers do not remember previous requests.
+
+## Nouns and Verbs in REST
+- In REST, API endpoints are typically represented by nouns (e.g., /bikes) and HTTP methods are the verbs.
+- Query strings and URL parameters are used to specify data in requests.
+
+For more details on REST API, refer to [this presentation](https://docs.google.com/presentation/d/e/2PACX-1vTEztADtG8OhJ4695LYwtVftNgriQK7zAOsYNru9OfaPA1mQEAlkNd1BqgOdec1aZRC6PxSxOnlrBeH/pub?start=false&loop=false&delayms=3000&slide=id.gd92b27aadb_0_310).
+
+Remember that HTTP is single-threaded, which means commands are executed one at a time.
+
+# useContext
+
+To avoid prop drilling, we use `useContext` in React:
+
+```javascript
+import { createContext } from "react";
+
+const ThemeContext = createContext();
+
+// Wrap your app with the Provider:
+ReactDOM.render(
+  <ThemeContext.Provider value="light">
+    <App />
+  </ThemeContext.Provider>,
+  document.getElementById("root")
+);
+
+// Consume the context in your child component:
+const value = useContext(ThemeContext);
+
+console.log(value); //light
+
+
+
+
+
+I've checked and corrected the content and converted it to Markdown. Here it is:
+
+```markdown
+## Rejected Promises and Error Handling
+
+If a promise is rejected (an error occurs), you can handle it using the `.catch` method or by using `Promise.reject()`.
+
+Here's an example of using `async` and `await` to fetch data from an API:
+
+```javascript
+async function fetchData() {
+  try {
+    const response = await fetch(API);
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+In this example, `async` and `await` are used to make the asynchronous code more readable, and error handling is done using `try...catch`. If the API request fails, it will be caught and handled in the `catch` block.
+```
+
