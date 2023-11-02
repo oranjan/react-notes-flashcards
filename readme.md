@@ -319,9 +319,7 @@ console.log(value); //light
 
 
 
-I've checked and corrected the content and converted it to Markdown. Here it is:
-
-```markdown
+```  
 ## Rejected Promises and Error Handling
 
 If a promise is rejected (an error occurs), you can handle it using the `.catch` method or by using `Promise.reject()`.
@@ -346,3 +344,79 @@ async function fetchData() {
 In this example, `async` and `await` are used to make the asynchronous code more readable, and error handling is done using `try...catch`. If the API request fails, it will be caught and handled in the `catch` block.
 ```
 
+```
+## HTTP Status Codes:
+
+- Status code 200 indicates a successful request with the requested data.
+- Status code 404 indicates that the requested resource was not found.
+- HTTP status codes can be categorized into 1xx (Informational), 2xx (Successful), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).
+
+## Using `res.ok` in JavaScript:
+
+- `res.ok` is a Boolean property indicating if the HTTP response was successful (status code in the 200-299 range).
+- If `res.ok` is `true`, the response was successful; if `false`, there was an error.
+- It's commonly used for error checking in Fetch API.
+
+## `.catch()` Block in Promise Chains:
+
+- Used for error handling in promise chains.
+- Placed at the end of the chain to catch and handle any errors thrown in previous `then` blocks.
+- It's crucial for handling errors in asynchronous operations.
+- You can handle errors in various ways, such as logging, displaying messages, or retrying operations.
+
+## Handling HTTP Errors with Fetch:
+
+- Fetch API only rejects promises on network errors, not on HTTP errors.
+- To handle HTTP errors, check the `ok` property of the `Response` object.
+- If `ok` is `false`, the response was not successful (e.g., 404 or 500 error).
+- Create a function to handle HTTP errors and use it in your code.
+
+Example:
+
+```javascript
+async function fetchWithErrorHandler(url) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    // Handle the HTTP error here.
+  }
+
+  return response;
+}
+```
+
+Handle HTTP errors using try-catch:
+
+```javascript
+try {
+  const response = await fetchWithErrorHandler('https://example.com/api/users');
+  const data = await response.json();
+  // Handle the data.
+} catch (error) {
+  // Handle HTTP errors here.
+}
+```
+
+In summary, use `res.ok` for network response status, and handle HTTP errors using custom functions and try-catch blocks for a better understanding of the success or failure of a network request.
+
+To remove the seconds part from the above code, we can use the following JavaScript code:
+
+```javascript
+const date = new Date();
+const time = date.toLocaleTimeString('hi-IN', {
+  hour: 'numeric',
+  minute: 'numeric',
+});
+```
+
+This code will return the time in Hindi, including the hour and minute, but without the seconds.
+
+Output:
+```
+रात 8:00 बजे
+```
+
+We can also use the `toLocaleDateString()` method to return the date in Indian locale without the seconds.
+```
+
+The text is now formatted in Markdown, making it more readable and structured.
